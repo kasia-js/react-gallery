@@ -1,9 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
-//
-import List from './Components/List';
 
-const reelimg = require('./assets/reels.jpg')
+import List from './Components/List';
 
 //const MyContext = React.createContext(defaultValue);
 
@@ -35,13 +33,14 @@ const App =  () => {
     return (
       <>
          <div>
-           <div class="header">
-           <a href="https://fontmeme.com/netflix-font/"><img src="https://fontmeme.com/permalink/201013/9a560530b9f8b713cd79e58e3c4c73e9.png" alt="netflix-font" border="0"/></a>
-           <img src={reelimg} alt="" height="100" width="400"/>
-           </div>
+           <h1>Hello</h1>
+           {/* <div className="movie-container"> */}
+             <div className="parent">
            <List value= {movies} handleClickPassed = {handleClick} heading="Discover"/>
+           </div>
+           {/* </div> */}
            <List value= {myList} handleClickPassed = {handleClick} heading="My List"/>
-           {movies.length ? "" : "no movies yet"}
+           {movies.length ? movies[0].title : "no movies yet"}
         </div> 
       </>
     );
@@ -52,7 +51,6 @@ const App =  () => {
 
 
 export default App;
-
 
 
 
