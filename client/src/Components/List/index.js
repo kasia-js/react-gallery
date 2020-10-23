@@ -17,7 +17,7 @@ export default ({value,heading,handleClickPassed}) => {
     
     const listElements = value.map(movie => (
       <>
-        <div className = "inner-container"> 
+        <div className = "parent"> 
           <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt="pics" width="150" height="200" />
           <div className = "overlapping"> 
             <p>{movie.title}</p>

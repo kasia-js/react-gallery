@@ -8,10 +8,6 @@ body {
   text-align: center;
 }
 
-.show{
- display: flex;
- flex-direction: row;
-}
 
 .divbutton {
   height: 30px;
@@ -24,14 +20,10 @@ button {
   width: 70px;
   
 }
-.inner-container {
-  display: flex;
-  flex-direction: row;
+.parent {
+  display: inline-block;
   position: relative; 
-  /* height: 50px; */
-  /* width: 100%; */
-  overflow: hidden;
-  position: relative;
+  height: 100%;
 }
 
 .overlapping {
@@ -40,7 +32,7 @@ button {
   width: 100%;
   top: 80%;
   background-color: rgba(255,255,255,0);
-  color: white;
+  color: green;
   font-weight: bold;
   align-items: bottom;
   /* opacity: 0.6; */
@@ -66,11 +58,13 @@ button {
   overflow: hidden; 
 }
 
-.parent {
-  position: absolute;
-    top: 0px;
-    bottom: -15px;
-    left: 0px;
-    right: -15px;
-    overflow: auto;
+.show {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 5vh;
+  padding-left: 5vw;
+  overflow-y: hidden;
+  width: 100vh;
+  height: 220px;
+  overflow-x: auto;
 }
