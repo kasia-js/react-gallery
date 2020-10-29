@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 import '../../App.css';
-import MovieInfo from '../MovieInfo';
+import Button from '@material-ui/core/Button';
 
 const urlAdd = require('../../assets/add.png');
 const urlTick = require('../../assets/tick.png');
@@ -27,25 +26,15 @@ export default ({ value, heading, handleClickPassed, onDetailClick }) => {
           height='250'
         />
         <div className='overlapping'>
-          <p>{movie.title}</p>
-          <button type='button' onClick={() => handleClickPassed(movie)}>
-            <img src={buttonIcon} alt='added button' width='25' height='25' />
-          </button>
-          {/* <button className = "details" type="button" onClick={() => onDetailClick(movie)}>
-              <img src = {details} alt="detail button" width="30" height="30"/>
-              </button> */}
-
-          {/* <Link to="/details/?info=movie.title">Details</Link> */}
-          {/* <Link 
-          to= {{
-            pathname:"/details",
-            search:"?info=movie.title"
-          }}>Details</Link> */}
-
-          {/* <Link to={`/details/${movie.id}`}>Details</Link> */}
-
-          <Link to={{ pathname:"/details", state:{id: {movie}}}}>Details</Link>
-          
+          {/* <p>{movie.title}</p> */}
+          <Button  variant="contained" color="primary" type='button' onClick={() => handleClickPassed(movie)}>
+           ADD
+          </Button>
+          <Link className="details" to={{ pathname:"/details", state:{id: {movie}}}}>
+          <Button  variant="contained" color="primary">
+          DETAILS
+        </Button>
+          </Link>
         </div>
       </div>
     </>
@@ -53,13 +42,9 @@ export default ({ value, heading, handleClickPassed, onDetailClick }) => {
 
   return (
     <>
-     <Switch>
-            <Route path='/details' component={MovieInfo} />
-          </Switch>
       <h2>{section}</h2>
       <div className='show'>{listElements} </div>
     </>
   );
 };
 
-// <button className = "details" type="button" onClick={() => onDetailClick(movie)}>
