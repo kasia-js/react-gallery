@@ -34,7 +34,7 @@ export default ({ value, heading, handleClickPassed, onDetailClick }) => {
           {/* <button className = "details" type="button" onClick={() => onDetailClick(movie)}>
               <img src = {details} alt="detail button" width="30" height="30"/>
               </button> */}
-          <Link to='/details/:{movie}'>Details</Link>
+          {/* <Link to='/details/:{movie}'>Details</Link> */}
           <Switch>
             <Route path='/:id' children={<MovieInfo />} />
           </Switch>
