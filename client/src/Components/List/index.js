@@ -34,10 +34,18 @@ export default ({ value, heading, handleClickPassed, onDetailClick }) => {
           {/* <button className = "details" type="button" onClick={() => onDetailClick(movie)}>
               <img src = {details} alt="detail button" width="30" height="30"/>
               </button> */}
-          <Link to='/details/:{movie}'>Details</Link>
-          <Switch>
-            <Route path='/:id' children={<MovieInfo />} />
-          </Switch>
+
+          {/* <Link to="/details/?info=movie.title">Details</Link> */}
+          {/* <Link 
+          to= {{
+            pathname:"/details",
+            search:"?info=movie.title"
+          }}>Details</Link> */}
+
+          {/* <Link to={`/details/${movie.id}`}>Details</Link> */}
+
+          <Link to={{ pathname:"/details", state:{id: {movie}}}}>Details</Link>
+          
         </div>
       </div>
     </>
@@ -45,6 +53,9 @@ export default ({ value, heading, handleClickPassed, onDetailClick }) => {
 
   return (
     <>
+     <Switch>
+            <Route path='/details' component={MovieInfo} />
+          </Switch>
       <h2>{section}</h2>
       <div className='show'>{listElements} </div>
     </>

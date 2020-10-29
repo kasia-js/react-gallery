@@ -1,15 +1,21 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 
 import '../../App.css';
 const back = require ('../../assets/back.png')
 
-export default ({value,heading,handleClickPassed, onBackClick}) => {
+//export default ({value,heading,handleClickPassed, onBackClick}) => {
+    export default (props) => {
     let { id } = useParams();
-    console.log(id, "params from path");
+    const location = useLocation();
+    const {movie} = location.state.id;
+
+    console.log(movie, "params from path");
     return (
         <>
         <h3> {id} From movie tile routing</h3>
+        <h2>On new page</h2>
+        <img src={back} alt="back"/>
         {/* <div className="outer">
         <div className="left">
         <h1>{value.title}</h1>
