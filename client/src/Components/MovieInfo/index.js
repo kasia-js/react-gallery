@@ -1,12 +1,16 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 import '../../App.css';
 const back = require ('../../assets/back.png')
 
 export default ({value,heading,handleClickPassed, onBackClick}) => {
+    let { id } = useParams();
+    console.log(id, "params from path");
     return (
         <>
-        <div className="outer">
+        <h3> {id} From movie tile routing</h3>
+        {/* <div className="outer">
         <div className="left">
         <h1>{value.title}</h1>
         <img src={`https://image.tmdb.org/t/p/w300/${value.poster_path}`} alt="pics" width="240" height="240" />
@@ -18,7 +22,7 @@ export default ({value,heading,handleClickPassed, onBackClick}) => {
 
         </button>
         </div>
-        </div>
+        </div> */}
         
         </>
     )

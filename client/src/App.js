@@ -70,16 +70,15 @@ const App = () => {
         </div> */}
       </div>
 }
-        {movieTile && 
-        // <Redirect to ={
+        {/* {movieTile && 
          <div>
         <MovieInfo
         value = {movieTile} 
         onBackClick = {showHome}
         />
       </div>
-        // }/>
-}
+      
+} */}
 
 {/* <Switch>
     <Route path={`/${movies.title}`} component = {MovieInfo}/>
@@ -89,3 +88,14 @@ const App = () => {
 };
 
 export default App;
+
+
+// {movieTile && 
+ 
+//    <div>
+//   <MovieInfo
+//   value = {movieTile} 
+//   onBackClick = {showHome}
+//   />
+// </div>
+ 
