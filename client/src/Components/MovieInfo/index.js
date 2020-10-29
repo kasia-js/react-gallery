@@ -1,29 +1,35 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-
+import { Link, useParams, useLocation } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import '../../App.css';
-const back = require ('../../assets/back.png')
+import './style.css';
 
-export default ({value,heading,handleClickPassed, onBackClick}) => {
-    let { id } = useParams();
-    console.log(id, "params from path");
-    return (
-        <>
-        <h3> {id} From movie tile routing</h3>
-        {/* <div className="outer">
-        <div className="left">
-        <h1>{value.title}</h1>
-        <img src={`https://image.tmdb.org/t/p/w300/${value.poster_path}`} alt="pics" width="240" height="240" />
-        </div>
-        <div className="right">
-        <p>{value.overview}</p>
-        <button className="back-home" type="button" onClick= {()=> onBackClick()}>
-        <img src = {back} alt="detail button" width="25" height="25"/>
+export default () => {
+  const location = useLocation();
+  const { movie } = location.state.id;
 
-        </button>
+  return (
+    <>
+      <div className='outer'>
+        <div className='left'>
+          <img
+            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            alt='pics'
+            width='300'
+            height='300'
+          />
         </div>
-        </div> */}
-        
-        </>
-    )
-}
+        <div className='right'>
+          <h1>{movie.title}</h1>
+          <p>{movie.overview}</p>
+
+          <Link className='back' to='/'>
+            <Button variant='contained' color='primary'>
+              BACK
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+};

@@ -1,20 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import HomePage from './Containers/HomePage';
 import MovieInfo from './Components/MovieInfo';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App>
-  
-  {/* <Switch>
-    <Route path={'http://localhost:3000/'+'/[a-zA-Z0-9]/'} component = {MovieInfo}/>
-  </Switch> */}
-  </App>
+      <App></App>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

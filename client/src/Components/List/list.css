@@ -1,0 +1,59 @@
+.overlapping button,
+link {
+  display: none;
+}
+
+.parent {
+  display: inline-block;
+  position: relative;
+}
+
+.overlapping {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  top: 80%;
+  justify-content: space-around;
+}
+
+.parent:hover button,
+a {
+  display: block;
+  cursor: hand;
+  justify-content: space-around;
+}
+.parent:hover {
+  opacity: 0.5;
+}
+
+.parent img {
+  margin-right: 5px;
+}
+
+.show {
+  display: flex;
+  margin-bottom: 10vh;
+  padding-left: 5vw;
+  overflow-y: hidden;
+}
+.show::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: black;
+}
+
+.show::-webkit-scrollbar {
+  width: 1px;
+  background-color: black;
+}
+
+.show::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.details {
+  text-decoration: none;
+}
+
+.section {
+  color: white;
+}

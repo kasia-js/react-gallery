@@ -1,4 +1,19 @@
+.back {
+  text-decoration: none;
+}
+
 .outer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10vh;
+}
+
+.left {
+  margin-left: 15vw;
+  margin-right: 3vw;
+}
+
+.right {
+  margin-right: 15vw;
 }
