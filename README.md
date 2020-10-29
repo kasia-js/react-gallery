@@ -30,7 +30,7 @@ A front-end web app displaying movies using Heroku API.
 3. Start the app.
 
   ```bash
-  npm start
+   npm start
   ```
 
 ## Built with
