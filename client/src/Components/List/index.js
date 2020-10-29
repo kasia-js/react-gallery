@@ -21,7 +21,7 @@ export default ({value,heading,handleClickPassed,onDetailClick}) => {
     const listElements = value.map(movie => (
       <>
         <div className = "parent"> 
-          <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt="pics" width="250" height="200" />
+          <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt="pics" width="250" height="250" />
           <div className = "overlapping"> 
             <p>{movie.title}</p>
               <button  type="button"  onClick={() => handleClickPassed(movie)}>

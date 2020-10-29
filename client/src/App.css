@@ -1,5 +1,5 @@
 body {
-  background-color:white;
+  background-color:black;
   color: red;
 }
 
@@ -40,7 +40,7 @@ h2 {
   position: absolute; 
   display: flex;
   width: 100%;
-  top: 55%;
+  top: 70%;
   background-color: rgba(255,255,255,0);
   color: white;
   font-weight: bold;
@@ -58,7 +58,8 @@ h2 {
   flex: 3;
   text-justify: center;
   font-weight: bolder;
-  color:tomato;
+  color: white;
+  font-size: large;
 }
 
 .overlapping button img {
