@@ -2,6 +2,11 @@
 
 A front-end web app displaying movies using Heroku API. 
 
+## Movie
+<p align="center">
+  <img src="src/assets/images/gif.gif" />
+</p>
+
 ## Screenshots
 
 <p align="center">
